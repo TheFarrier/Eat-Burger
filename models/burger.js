@@ -9,8 +9,8 @@ const burger = {
   insertOne: function (name, callback) {
     orm.insertOne(name, callback)
   },
-  updateOne: function () {
-    orm.updatedOne()
+  updateOne: function (id, callback) {
+    orm.updatedOne(id, callback)
   }
 };
 
