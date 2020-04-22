@@ -8,23 +8,17 @@ router.get("/", function (req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function (req, res) {
   burger.insertOne([req.body.name], function (result) {
-    // Send back the ID of the new quote
     res.redirect("/");
   });
 });
 
 router.post("/api/burgers/:id", function (req, res) {
-  var condition = "id = " + req.params.id;
-
-  console.log("devoured:", condition);
-
   burger.updateOne(req.params.id,
     function (result) {
       if (result.changedRows === 0) {
