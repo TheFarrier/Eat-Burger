@@ -8,9 +8,12 @@
   <li>
     <p>
       {{this.burger_name}}
-      <button class="devour" action="/api/burgers/{{this.id}}" method="PUT">
-        Devour!
-      </button>
+      <form action="/api/burgers/{{this.id}}" method="POST">
+        <button class="devour" type="submit">
+          Devour!
+        </button>
+      </form>
+
     </p>
   </li>
   {{/unless}}
