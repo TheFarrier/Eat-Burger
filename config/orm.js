@@ -1,14 +1,36 @@
 const connection = require("./connection.js")
 
 var orm = {
-  selectAll: async function(){
-
+  selectAll: async function (cb) {
+    connection.query(`SELECT * FROM burgers`,
+      function (err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      }
+    )
   },
-  insertOne: async function(){
-
+  insertOne: async function (name, cb) {
+    connection.query(`INSERT INTO burgers SET ?`,
+      {
+        burger_name: name,
+        devoured: false
+      },
+      function (err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result)
+      }
+    )
   },
-  updatedOne: async function(){
+  updatedOne: async function () {
+    connection.query(`UPDATE burgers`,
+      function (err, result) {
 
+      }
+    )
   }
 }
 
