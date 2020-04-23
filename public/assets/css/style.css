@@ -1,0 +1,63 @@
+body {
+  background-color: #ffdc9c;
+  
+}
+
+h1{
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li{
+  background-color: #aa9369;
+  padding: 1px 20px;
+  margin: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 20pt;
+
+}
+
+button {
+  background-color: #71b6f6;
+  border-radius: 2px;
+  border-color: #3d83c5;
+  border-style: solid;
+  color:white;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.container {
+ display: flex;
+ justify-content: center;
+}
+
+.not-devoured{
+  flex:1;
+}
+
+.devour-form {
+  display: inline-flex;
+  flex-direction: row;
+  
+}
+
+.devoured{
+  flex:1;
+}
+
+.list-item{
+  flex-direction: column;
+}
+
+.add {
+flex-direction: column;
+justify-content: center;
+}
